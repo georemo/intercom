@@ -1,5 +1,13 @@
 # Intercom
 
+## Objective
+
+Explore inter component communication that can be used by menu component to load desktop content in corpdesk.
+
+## Inspiration
+
+The solution is based on https://www.dotnetcurry.com/angularjs/1445/angular-services-component-communication
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 
 ## Development server
