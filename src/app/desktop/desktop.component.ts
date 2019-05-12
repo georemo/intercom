@@ -13,7 +13,7 @@ export class DesktopComponent implements OnInit {
   smenuItem;
   ds: Desktop;
   dsCollection;
-  htmlStr = '<strong>The Tortoise</strong> &amp; the Hare';
+  htmlStr = '';
 
   constructor(private navrelay: NavrelayService) {
     this.ds = new Desktop();
@@ -31,11 +31,16 @@ export class DesktopComponent implements OnInit {
     this.setContentKey();
   }
 
+  /*
+  To Do:
+  Use parent to child communication to controll div contents
+  Where parent is Desktop and child is dashboard
+  */
   setContentKey() {
     console.log('starting DesktopComponent::setContentKey()')
     this.dsCollection = this.ds.filterContents(this.menuGuid);
     console.dir(this.dsCollection);
-    this.htmlStr = `<strong>The Tortoise</strong> &amp; the Hare ${this.dsCollection.content}` ;
+    this.htmlStr = `${this.dsCollection.content}` ;
   }
 
   getDsCollection(){
